@@ -1,0 +1,98 @@
+@mixin mb($font-family, $file-path, $font-weight, $font-style) {
+}
+$font-size-lg: 8px;
+$font-size-md: 4px;
+$font-size-sm: 2px;
+$properties: (
+  'mt': margin-top,
+  'mb': margin-bottom,
+  'ml': margin-left,
+  'mr': margin-right,
+  'pt': padding-top,
+  'pb': padding-bottom,
+  'pl': padding-left,
+  'pr': padding-right,
+  'lh': line-height,
+  'fz': font-size,
+);
+
+@each $key, $value in $properties {
+   @for $i from 0 through 12 {
+      .#{$key}-#{$i} {
+         #{$value}: $i * $font-size-lg;
+      }
+   }
+}
+
+.container {
+   margin: 0 auto;
+   max-width: 1110px;
+}
+
+// Pad
+@media (max-width: 768px) {
+   $properties-md: (
+   'mt-md': margin-top,
+   'mb-md': margin-bottom,
+   'ml-md': margin-left,
+   'mr-md': margin-right,
+   'pt-md': padding-top,
+   'pb-md': padding-bottom,
+   'pl-md': padding-left,
+   'pr-md': padding-right,
+   'lh-md': line-height,
+   'fz-md': font-size,
+   );
+
+   .container {
+      max-width: 690px;
+   }
+
+   @each $key, $value in $properties-md {
+      @for $i from 0 through 12 {
+         .#{$key}-#{$i} {
+            #{$value}: $i * $font-size-md;
+         }
+      }
+   }
+}
+
+// Mobil
+@media (max-width: 376px) {
+   $properties-sm: (
+   'mt-sm': margin-top,
+   'mb-sm': margin-bottom,
+   'ml-sm': margin-left,
+   'mr-sm': margin-right,
+   'pt-sm': padding-top,
+   'pb-sm': padding-bottom,
+   'pl-sm': padding-left,
+   'pr-sm': padding-right,
+   'lh-sm': line-height,
+   'fz-sm': font-size,
+   );
+
+   .container {
+      max-width: 345px;
+   }
+
+   @each $key, $value in $properties-sm {
+      @for $i from 0 through 12 {
+         .#{$key}-#{$i} {
+            #{$value}: $i * $font-size-sm;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .wrap {
+      min-width: 690px;
+   }
+}
+
+@media screen and (max-width: 376px) {
+   .wrap {
+      min-width: 375px;
+   }
+}

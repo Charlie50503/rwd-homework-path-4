@@ -1,23 +1,25 @@
-$color: #00cc99;
-
-.header {
-  height: 200px;
-  background-color: #00cc99;
+@import "utils/variables.scss";
+@import "base/reset.scss";
+@import "base/utils.scss";
+@import "base/font.scss";
+@import "utils/utils.scss";
+@import "layout/nav.scss";
+@import "layout/footer.scss";
+.test {
+  font-family: "custom-Medium";
+}
+.test1 {
+  font-family: "custom-Black";
 }
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
+.test2 {
+  font-family: "custom-BoldItalic";
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
-  }
+.test3 {
+  font-family: "custom-Regular";
+}
+
+.test4 {
+  font-family: "custom-Bold";
 }
