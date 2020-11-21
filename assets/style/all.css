@@ -1379,19 +1379,128 @@ img {
           font-size: 14px;
           line-height: 21px; } }
 
+.option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .option-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1386px;
+    width: 100%; }
+    .option-list-item {
+      width: 33%; }
+      .option-list-item__link {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: custom-Medium; }
+        .option-list-item__link--active:after {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 16px;
+          background-color: #aa0601;
+          content: '　'; }
+      .option-list-item__icon.diamond {
+        width: 48px;
+        height: 38px; }
+      .option-list-item__icon.sun {
+        width: 48px;
+        height: 48px; }
+      .option-list-item__icon.light {
+        width: 35px;
+        height: 48px; }
+      .option-list-item__text {
+        color: #000;
+        font-size: 42px;
+        line-height: 63px; }
+
+.store-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .store-banner__photo {
+    max-width: 945px;
+    width: 50%;
+    height: 309px;
+    background-position: center center;
+    background-size: cover; }
+  .store-banner .glass {
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/week4/banner-1.png); }
+  .store-banner .face {
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/week4/banner-2.png); }
+
+@media screen and (max-width: 768px) {
+  .option-list-item__link--active:after {
+    height: 8px; }
+  .option-list-item__icon.diamond {
+    width: 32px;
+    height: 25px; }
+  .option-list-item__icon.sun {
+    width: 32px;
+    height: 32px; }
+  .option-list-item__icon.light {
+    width: 23px;
+    height: 32px; }
+  .option-list-item__text {
+    font-size: 28px;
+    line-height: 42px; }
+  .store-banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .store-banner__photo {
+      max-width: 384px; } }
+
+@media screen and (max-width: 376px) {
+  .option-list-item__link--active:after {
+    height: 4px; }
+  .option-list-item__icon.diamond {
+    width: 15px;
+    height: 12px; }
+  .option-list-item__icon.sun {
+    width: 14px;
+    height: 15px; }
+  .option-list-item__icon.light {
+    width: 11px;
+    height: 15px; }
+  .option-list-item__text {
+    font-size: 14px;
+    line-height: 19px; } }
+
 .test {
-  font-family: "custom-Medium"; }
+  font-family: 'custom-Medium'; }
 
 .test1 {
-  font-family: "custom-Black"; }
+  font-family: 'custom-Black'; }
 
 .test2 {
-  font-family: "custom-BoldItalic"; }
+  font-family: 'custom-BoldItalic'; }
 
 .test3 {
-  font-family: "custom-Regular"; }
+  font-family: 'custom-Regular'; }
 
 .test4 {
-  font-family: "custom-Bold"; }
+  font-family: 'custom-Bold'; }
 
 /*# sourceMappingURL=all.css.map */
