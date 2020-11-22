@@ -1,0 +1,137 @@
+.faq-banner {
+   height: 304px;
+   background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/qa.png');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   .container {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+   }
+}
+
+.faq-title {
+   display: flex;
+   height: 90px;
+
+   &__content {
+      display: flex;
+      align-items: center;
+      font-size: 64px;
+      font-family: custom-Bold;
+      line-height: 80px;
+   }
+
+   &__icon {
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 58px;
+      height: 58px;
+   }
+}
+
+.faq-content {
+   &__title {
+      font-size: 32px;
+      font-family: custom-Bold;
+      line-height: 63px;
+   }
+
+   &-questions {
+      &__question {
+         &-content {
+            width: 100%;
+            font-size: 20px;
+            font-family: custom-Bold;
+            line-height: 23px;
+         }
+      }
+
+      &__answer {
+         width: 920px;
+         font-size: 16px;
+         font-family: custom-Regular;
+         line-height: 24px;
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .faq-title {
+      height: 80px;
+
+      &__content {
+         font-size: 48px;
+      }
+
+      &__icon {
+         width: 48px;
+         height: 48px;
+      }
+   }
+
+   .faq-content {
+      &__title {
+         font-family: custom-Bold;
+      }
+
+      &-questions {
+         &__question {
+            &-content {
+               width: 100%;
+               font-size: 20px;
+               font-family: custom-Bold;
+               line-height: 23px;
+            }
+         }
+
+         &__answer {
+            width: 920px;
+            font-size: 16px;
+            font-family: custom-Regular;
+            line-height: 24px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 376px) {
+   .faq-title {
+      height: 40px;
+
+      &__content {
+         font-size: 28px;
+         line-height: 40px;
+      }
+
+      &__icon {
+         width: 24px;
+         height: 24px;
+      }
+   }
+
+   .faq-content {
+      &__title {
+         font-size: 20px;
+      }
+
+      &-questions {
+         &__question {
+            &-content {
+               width: 100%;
+               font-size: 16px;
+               line-height: 24px;
+            }
+         }
+
+         &__answer {
+            width: 100%;
+            font-size: 14px;
+            font-family: custom-Regular;
+            line-height: 21px;
+         }
+      }
+   }
+}

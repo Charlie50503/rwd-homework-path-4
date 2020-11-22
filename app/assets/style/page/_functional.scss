@@ -1,0 +1,383 @@
+.option {
+   display: flex;
+   justify-content: center;
+
+   &-list {
+      display: flex;
+      max-width: 1386px;
+      width: 100%;
+
+      &-item {
+         width: 33%;
+
+         &__link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: auto;
+            margin-left: auto;
+            font-family: custom-Medium;
+
+            &--active:after {
+               position: absolute;
+               bottom: 0;
+               width: 100%;
+               height: 16px;
+               background-color: map-get($bg-color, primary);
+               content: '　';
+            }
+         }
+
+         &__icon {
+            &.diamond {
+               width: 48px;
+               height: 38px;
+            }
+
+            &.sun {
+               width: 48px;
+               height: 48px;
+            }
+
+            &.light {
+               width: 35px;
+               height: 48px;
+            }
+         }
+
+         &__text {
+            color: map-get($text-color, accent);
+            font-size: 42px;
+            line-height: 63px;
+         }
+      }
+   }
+}
+
+.store-banner {
+   display: flex;
+   justify-content: space-between;
+
+   &__photo {
+      width: 50%;
+      height: 309px;
+      background-position: center center;
+      background-size: cover;
+   }
+
+   .glass {
+      background-image: url(https://hexschool.github.io/webLayoutTraining1st/week4/banner-1.png);
+   }
+
+   .face {
+      background-image: url(https://hexschool.github.io/webLayoutTraining1st/week4/banner-2.png);
+   }
+}
+
+.product {
+   &-title-en {
+      font-size: 42px;
+      font-family: custom-Medium;
+      line-height: 63px;
+   }
+
+   &-title {
+      font-size: 32px;
+      font-family: custom-Regular;
+      line-height: 48px;
+   }
+
+   &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &-item {
+         display: flex;
+
+         &__container {
+            width: 255px;
+         }
+
+         &__photo {
+            width: 255px;
+            height: 164px;
+
+            object-fit: cover;
+         }
+
+         &__content {
+            display: flex;
+            justify-content: space-between;
+
+            &-id {
+               font-size: 24px;
+               font-family: custom-Regular;
+               line-height: 36px;
+            }
+
+            &-money {
+               font-size: 24px;
+               font-family: custom-Medium;
+               line-height: 36px;
+            }
+         }
+
+         &__color {
+            display: flex;
+
+            &-card {
+               width: 24px;
+               height: 24px;
+               border-radius: 4px;
+            }
+         }
+      }
+   }
+}
+
+.pagination {
+   margin: 0 auto;
+
+   &-items {
+      display: flex;
+      justify-content: center;
+
+      &__link {
+         padding: 10px 14px;
+         height: 48px;
+         border: 1px solid #555;
+         font-size: 18px;
+         font-family: custom-Regular;
+         line-height: 27px;
+
+         &--hover:hover {
+            background-color: #000;
+            color: #fff;
+         }
+      }
+   }
+
+   .prev, .next {
+      padding: 10px 12px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .option {
+      &-list {
+         &-item {
+            &__link {
+               &--active {
+                  &:after {
+                     height: 8px;
+                  }
+               }
+            }
+
+            &__icon {
+               &.diamond {
+                  width: 32px;
+                  height: 25px;
+               }
+
+               &.sun {
+                  width: 32px;
+                  height: 32px;
+               }
+
+               &.light {
+                  width: 23px;
+                  height: 32px;
+               }
+            }
+
+            &__text {
+               font-size: 28px;
+               line-height: 42px;
+            }
+         }
+      }
+   }
+
+   .product {
+      &-title-en {
+         font-size: 32px;
+         line-height: 48px;
+      }
+
+      &-title {
+         font-size: 24px;
+         line-height: 36px;
+      }
+
+      &-list {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+         &-item {
+            display: flex;
+
+            &__container {
+               width: 330px;
+            }
+
+            &__photo {
+               width: 330px;
+               height: 164px;
+            }
+
+            &__content {
+               display: flex;
+               justify-content: space-between;
+
+               &-id {
+                  font-size: 24px;
+                  font-family: custom-Regular;
+                  line-height: 30px;
+               }
+
+               &-money {
+                  font-size: 24px;
+                  font-family: custom-Medium;
+                  line-height: 30px;
+               }
+            }
+
+            &__color {
+               display: flex;
+
+               &-card {
+                  width: 24px;
+                  height: 24px;
+                  border-radius: 4px;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 376px) {
+   .option {
+      &-list {
+         &-item {
+            &__link {
+               &--active {
+                  &:after {
+                     height: 4px;
+                  }
+               }
+            }
+
+            &__icon {
+               &.diamond {
+                  width: 15px;
+                  height: 12px;
+               }
+
+               &.sun {
+                  width: 14px;
+                  height: 15px;
+               }
+
+               &.light {
+                  width: 11px;
+                  height: 15px;
+               }
+            }
+
+            &__text {
+               font-size: 14px;
+               line-height: 19px;
+            }
+         }
+      }
+   }
+
+   .store-banner {
+      &__photo {
+         height: 144px;
+      }
+   }
+
+   .product {
+      &-title-en {
+         font-size: 20px;
+         font-family: custom-Medium;
+         line-height: 48px;
+      }
+
+      &-title {
+         font-size: 16px;
+         font-family: custom-Regular;
+         line-height: 36px;
+      }
+
+      &-list {
+         &-item {
+            &:nth-child(n + 4) {
+               display: none;
+            }
+
+            &__container {
+               width: 100%;
+            }
+
+            &__photo {
+               width: 100%;
+               height: 166px;
+            }
+
+            &__content {
+               &-id {
+                  font-size: 24px;
+                  line-height: 36px;
+               }
+
+               &-money {
+                  font-size: 24px;
+                  line-height: 36px;
+               }
+            }
+
+            &__color {
+               display: flex;
+
+               &-card {
+                  width: 24px;
+                  height: 24px;
+                  border-radius: 4px;
+               }
+            }
+         }
+      }
+   }
+
+   .pagination {
+      &-items {
+         display: flex;
+         justify-content: center;
+
+         &__link {
+            padding: 8px 10px;
+            height: 48px;
+            border: 1px solid #555;
+            font-size: 11px;
+            font-family: custom-Regular;
+            line-height: 17px;
+
+            &--hover:hover {
+               background-color: #000;
+               color: #fff;
+            }
+         }
+      }
+
+      .prev, .next {
+         padding: 8px 9px;
+      }
+   }
+}

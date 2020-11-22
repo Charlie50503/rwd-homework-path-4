@@ -17,7 +17,7 @@ $properties: (
 );
 
 @each $key, $value in $properties {
-   @for $i from 0 through 12 {
+   @for $i from 0 through 38 {
       .#{$key}-#{$i} {
          #{$value}: $i * $font-size-lg;
       }
@@ -49,7 +49,7 @@ $properties: (
    }
 
    @each $key, $value in $properties-md {
-      @for $i from 0 through 12 {
+      @for $i from 0 through 38 {
          .#{$key}-#{$i} {
             #{$value}: $i * $font-size-md;
          }
@@ -77,7 +77,7 @@ $properties: (
    }
 
    @each $key, $value in $properties-sm {
-      @for $i from 0 through 12 {
+      @for $i from 0 through 38 {
          .#{$key}-#{$i} {
             #{$value}: $i * $font-size-sm;
          }
@@ -86,13 +86,19 @@ $properties: (
 }
 
 @media screen and (max-width: 768px) {
-   .wrap {
-      min-width: 690px;
-   }
 }
 
 @media screen and (max-width: 376px) {
-   .wrap {
-      min-width: 375px;
-   }
+}
+
+.text-center {
+   text-align: center;
+}
+
+.product-color-primary {
+   background-color: #5f3e2d;
+}
+
+.product-color-accent {
+   background-color: #b75929;
 }
