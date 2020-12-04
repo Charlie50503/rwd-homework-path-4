@@ -1,9 +1,13 @@
-a {
-   text-decoration: none;
-}
+/* 全域 border box */
 
 *, *::before, *::after {
    box-sizing: border-box;
+}
+
+a {
+   display: block;
+   height: auto;
+   text-decoration: none;
 }
 
 body {

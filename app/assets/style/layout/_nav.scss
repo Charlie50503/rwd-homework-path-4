@@ -5,9 +5,14 @@
    padding: 30px 88px;
    background-color: map-get($bg-color, primary);
 
-   &-logo__photo {
+   &-logo {
+      overflow: hidden;
       width: 80px;
-      height: 49px;
+      height: 48.57px;
+      background: url(https://hexschool.github.io/webLayoutTraining1st/week3/logo.png)
+      no-repeat;
+      text-indent: 101%;
+      white-space: nowrap;
    }
 
    &-links {
@@ -24,26 +29,23 @@
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
    .nav {
       padding: 30px 39px;
    }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 768px) {
    .nav {
       flex-direction: column;
       padding: 0;
 
       &-logo {
-         display: flex;
-         justify-content: center;
-         width: 100%;
-
-         &__photo {
-            width: 48px;
-            height: 29px;
-         }
+         // width: 100%;
+         width: 48px;
+         height: 29px;
+         background-size: cover;
+         line-height: 29px;
       }
 
       &-links {

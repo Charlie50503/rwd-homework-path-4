@@ -30,7 +30,7 @@ $properties: (
 }
 
 // Pad
-@media (max-width: 768px) {
+@media (max-width: 1110px) {
    $properties-md: (
    'mt-md': margin-top,
    'mb-md': margin-bottom,
@@ -58,7 +58,7 @@ $properties: (
 }
 
 // Mobil
-@media (max-width: 376px) {
+@media (max-width: 768px) {
    $properties-sm: (
    'mt-sm': margin-top,
    'mb-sm': margin-bottom,
@@ -85,10 +85,10 @@ $properties: (
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1110px) {
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 768px) {
 }
 
 .text-center {
